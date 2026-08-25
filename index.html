@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ANGIL</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f5dff2;
+            color: #a66fbd;
+            font-family: Georgia, serif;
+            overflow-x: hidden;
+        }
+
+        /* الصفحة الرئيسية */
+        .home {
+            min-height: 100vh;
+            padding: 45px 6%;
+            position: relative;
+        }
+
+        /* اسم الموقع */
+        .logo {
+            position: absolute;
+            top: 35px;
+            left: 6%;
+            font-size: 38px;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+
+        /* القائمة */
+        nav {
+            position: absolute;
+            top: 45px;
+            right: 6%;
+            display: flex;
+            gap: 45px;
+        }
+
+        nav a {
+            color: #a66fbd;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #74458c;
+            transform: translateY(-3px);
+        }
+
+        /* المحتوى */
+        .content {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        /* الناحية الشمال */
+        .left {
+            width: 52%;
+            padding-top: 80px;
+        }
+
+        .title {
+            font-size: clamp(90px, 12vw, 180px);
+            letter-spacing: 10px;
+            color: #a66fbd;
+            text-shadow: 0 0 20px rgba(190, 130, 220, 0.4);
+        }
+
+        .subtitle {
+            margin-top: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            letter-spacing: 8px;
+            color: #b984c8;
+        }
+
+        /* المربعين */
+        .cards {
+            display: flex;
+            gap: 25px;
+            margin-top: 70px;
+        }
+
+        .card {
+            width: 280px;
+            min-height: 250px;
+            padding: 35px;
+            border-radius: 22px;
+
+            background: #d0a9d4;
+
+            box-shadow:
+                0 15px 35px rgba(130, 80, 150, 0.15);
+
+            transition: 0.35s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow:
+                0 20px 45px rgba(130, 80, 150, 0.25);
+        }
+
+        .card h2 {
+            font-family: Arial, sans-serif;
+            color: white;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            color: #fff4ff;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        /* صورة البنت */
+        .character {
+            width: 48%;
+            height: 90vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .character img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+
+            filter: drop-shadow(
+                0 20px 30px rgba(150, 90, 170, 0.15)
+            );
+        }
+
+        /* موبايل */
+        @media (max-width: 900px) {
+
+            nav {
+                display: none;
+            }
+
+            .content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .left {
+                width: 100%;
+                padding-top: 100px;
+            }
+
+            .title {
+                font-size: 80px;
+            }
+
+            .cards {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .character {
+                width: 100%;
+                height: auto;
+            }
+
+            .character img {
+                max-height: 600px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="home">
+
+        <div class="logo">
+            ANGIL
+        </div>
+
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">PROJECTS</a>
+            <a href="#">CONTACT</a>
+        </nav>
+
+
+        <div class="content">
+
+            <section class="left">
+
+                <h1 class="title">
+                    ANGIL
+                </h1>
+
+                <p class="subtitle">
+                    WELCOME TO MY WORLD ♡
+                </p>
+
+
+                <div class="cards">
+
+                    <div class="card">
+                        <h2>ABOUT ME</h2>
+
+                        <p>
+                            Welcome to my little world.
+                            Here you can learn more about me
+                            and the things I love.
+                        </p>
+                    </div>
+
+
+                    <div class="card">
+                        <h2>PROJECTS</h2>
+
+                        <p>
+                            A collection of my projects,
+                            ideas and things that I have
+                            created.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="character">
+
+                <img src="angel.jpg" alt="ANGIL">
+
+            </section>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
